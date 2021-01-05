@@ -7,8 +7,12 @@ import Img from "gatsby-image"
 import PostFooter from "gatsby-theme-catalyst-helium/src/components/post-footer"
 import { FaRegClock } from "react-icons/fa"
 import kebabCase from "lodash/kebabCase"
+import { useHeliumConfig } from "gatsby-theme-catalyst-helium"
+import Hero from "./hero"
 
-const Post = ({ data: { post }, previous, next }) => (
+const Post = ({ data: { post }, previous, next }) => {
+    const { useHero } = useHeliumConfig()
+    return (
   <Layout>
     <SEO
       title={post.title}
@@ -168,8 +172,9 @@ const Post = ({ data: { post }, previous, next }) => (
       </span>
       <MDXRenderer>{post.body}</MDXRenderer>
     </article>
+    {useHero && <Hero />}
     <PostFooter {...{ previous, next }} />
   </Layout>
-)
+)}
 
 export default Post
