@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 export default function HTML(props) {
+  let [enableCookies] = false
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -22,7 +23,33 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
 
-        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "435008575d0c46a0809f1537a233ba5c"}'></script>
+        <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var config = {
+                apiKey: '532883f051d142f52e83791ff8b8265ab4e4a095',
+                product: 'COMMUNITY',
+                optionalCookies: [
+                    {
+                        name: 'analytics',
+                        label: 'Analytics',
+                        description: \`We'd like to set Cloudflare Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone. For more information on how these cookies work, please see our 'Cookies page'.\`,
+                        cookies: [],
+                        onAccept : function(){},
+                        onRevoke: function(){}
+                    }
+                ],
+
+                position: 'LEFT',
+                theme: 'DARK'
+            };
+            
+            CookieControl.load( config );`,
+          }}
+        />
+
+        {<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "435008575d0c46a0809f1537a233ba5c"}'></script>}
       </body>
     </html>
   )
