@@ -7,6 +7,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "gatsby": "^2.24.58",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-theme-catalyst-helium": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
