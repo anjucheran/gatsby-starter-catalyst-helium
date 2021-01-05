@@ -14,7 +14,7 @@ const PostsList = ({ posts }) => {
   const { useHero } = useHeliumConfig()
   return (
     <Layout>
-      <SEO title={postListTitle} />
+      <SEO title={postListTitle && 'My Skills'} />
       <div
         sx={{
           width: "100vw",
@@ -32,7 +32,7 @@ const PostsList = ({ posts }) => {
               variant: "variants.postListPageTitle",
             }}
           >
-            {postListTitle}
+            {postListTitle && 'My Skills'}
           </Styled.h1>
         ) : null}
         <div
