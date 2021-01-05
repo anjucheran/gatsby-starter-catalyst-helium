@@ -69,6 +69,7 @@ export default merge(BaseTheme, {
     logoHeightXL: "60px", // Logo height on extra large screens, above 1440px
     iconsFooter: "32px", // Sets the icons size for the footer
     iconsHeader: "20px", // Sets the icons size for the header
+    textFooter: "12px", // Sets the font size for the footer
   },
   styles: {
     a: {

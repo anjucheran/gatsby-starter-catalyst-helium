@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 
 export default function HTML(props) {
-  let [enableCookies] = false
   return (
     <html {...props.htmlAttributes}>
       <head>

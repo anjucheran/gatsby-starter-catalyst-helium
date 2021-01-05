@@ -52,7 +52,7 @@ module.exports = {
         // Core theme
         displaySiteLogo: false,
         displaySiteLogoMobile: false,
-        footerContentLocation: "right",
+        footerContentLocation: "center",
         remarkImagesWidth: 1920,
         // Blog theme
         excerptLength: 200,
