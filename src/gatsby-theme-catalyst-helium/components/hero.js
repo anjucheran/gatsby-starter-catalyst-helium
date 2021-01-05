@@ -36,7 +36,7 @@ const Hero = () => {
           gridTemplateRows: ["180px auto", null, "230px auto", null, null],
         }}
       >
-        <Img
+        {/* <Img
           fluid={avatar}
           sx={{
             gridColumn: "2 / 3",
@@ -50,7 +50,7 @@ const Hero = () => {
             borderStyle: "solid",
           }}
           alt="Catalyst Helium"
-        />
+        /> */}
         <div
           sx={{
             gridColumn: "1 / -1",
