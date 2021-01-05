@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '@material-ui/core'
+import { navigate } from 'gatsby'
 
 class ContactForm extends React.Component{
     constructor(props) {
@@ -52,7 +53,7 @@ class ContactForm extends React.Component{
               "form-name": evt.target.getAttribute("name"),
               ...this.state
             })
-          }).then(() => console.log("/thank-you/")).catch(error => alert(error))
+          }).then(() => navigate("/thank-you/")).catch(error => console.log(error))
     }
     
     render() {
