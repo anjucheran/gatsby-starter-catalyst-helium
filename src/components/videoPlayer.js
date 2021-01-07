@@ -7,7 +7,7 @@ class VideoPlayer extends React.Component{
     
     render() {
         return (
-            <smartvideo src={this.props.src} width="800" height="600" controls></smartvideo>
+            <smartvideo src={this.props.src} width="800" height="600" class="swarm-fluid" controls></smartvideo>
         )
     }
 }
