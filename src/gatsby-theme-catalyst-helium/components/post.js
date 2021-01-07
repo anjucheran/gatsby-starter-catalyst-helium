@@ -135,13 +135,12 @@ const Post = ({ data: { post }, previous, next }) => {
             }}
           />
         </div>
-        {post.featuredImage && (<div sx={{ mb: 4, textAlign: 'center' }}>
+      </div>
+      {post.featuredImage && (<div sx={{ mb: 4}}>
           <Img
             sx={{
               maxHeight: "400px",
               variant: "variants.postImage",
-              maxWidth: ["100%", null, null, "90%", "80%"],
-              margin: "auto",
             }}
             fluid={post.featuredImage.childImageSharp.fluid}
             alt={post.title}
@@ -153,7 +152,6 @@ const Post = ({ data: { post }, previous, next }) => {
             {post.featuredImageCaption}
           </span>
         </div>)}
-      </div>
       <span
         sx={{
           color: "textGray",
