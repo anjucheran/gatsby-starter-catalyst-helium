@@ -54,7 +54,7 @@ const Hero = () => {
         <div
           sx={{
             gridColumn: "1 / -1",
-            gridRow: "2 / 3",
+            gridRow: "1 / 3",
             zIndex: 2,
             bg: "primary",
             px: [2, 3, 4, null, null],

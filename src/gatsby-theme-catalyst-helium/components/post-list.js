@@ -15,6 +15,7 @@ const PostsList = ({ posts }) => {
   return (
     <Layout>
       <SEO title={postListTitle && 'My Skills'} />
+      {useHero && <Hero />}
       <div
         sx={{
           width: "100vw",
@@ -246,7 +247,6 @@ const PostsList = ({ posts }) => {
           })}
         </div>
       </div>
-      {useHero && <Hero />}
     </Layout>
   )
 }
