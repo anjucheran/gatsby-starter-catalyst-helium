@@ -22,6 +22,17 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
 
+        <script
+          data-cfasync="false"
+          dangerouslySetInnerHTML={{
+            __html: `var swarmoptions = {
+              swarmcdnkey: "0ed345b4-db94-4ac3-a0d2-283dc2537971"
+            };;`
+          }}
+        />
+        <script data-cfasync="false" src="https://assets.swarmcdn.com/cross/swarmdetect.js"></script>
+
+
         <script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
         <script
           dangerouslySetInnerHTML={{
