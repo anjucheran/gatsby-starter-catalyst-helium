@@ -2,6 +2,8 @@ import React from 'react'
 import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '@material-ui/core'
 import { navigate } from 'gatsby'
 
+import styles from '../styles/formStyles'
+
 class ContactForm extends React.Component{
     constructor(props) {
         super(props)
@@ -58,8 +60,8 @@ class ContactForm extends React.Component{
     
     render() {
         return (
-            <Container>
-            <form netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={this.handleSubmit}>
+            <Container style={styles.formContainer}>
+            <form netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={this.handleSubmit} >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                 <Grid container spacing={3}>
@@ -85,6 +87,7 @@ class ContactForm extends React.Component{
                         </Grid>
                         <Grid item xs={12}>
                         <FormControlLabel
+                            style={styles.checkboxLabel}
                             control={
                             <Checkbox
                                 checked={this.state.consent}

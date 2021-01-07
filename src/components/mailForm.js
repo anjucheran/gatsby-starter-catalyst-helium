@@ -3,6 +3,8 @@ import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '
 import { navigate } from 'gatsby'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
+import styles from '../styles/formStyles'
+
 class MailForm extends React.Component{
     constructor(props) {
         super(props)
@@ -41,7 +43,7 @@ class MailForm extends React.Component{
     
     render() {
         return (
-            <Container>
+            <Container style={styles.formContainer}>
             <form name="mail" onSubmit={this.handleSubmit}>
                 <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -63,6 +65,7 @@ class MailForm extends React.Component{
                         </Grid>
                         <Grid item xs={12}>
                         <FormControlLabel
+                            style={styles.checkboxLabel}
                             control={
                             <Checkbox
                                 checked={this.state.consent}
