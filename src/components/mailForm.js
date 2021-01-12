@@ -3,7 +3,7 @@ import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '
 import { navigate } from 'gatsby'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
-import styles from '../styles/formStyles'
+import '../styles/formStyles.css'
 
 class MailForm extends React.Component{
     constructor(props) {
@@ -43,50 +43,51 @@ class MailForm extends React.Component{
     
     render() {
         return (
-            <Container style={styles.formContainer}>
-            <form name="mail" onSubmit={this.handleSubmit}>
-                <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12}>
-                            <TextField fullWidth label="First Name" name="name" size="small" variant="outlined" required onChange={this.handleName} />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Email Address"
-                                name="email"
-                                size="small"
-                                type="email"
-                                variant="outlined"
-                                required
-                                onChange={this.handleEmail}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                        <FormControlLabel
-                            style={styles.checkboxLabel}
-                            control={
-                            <Checkbox
-                                checked={this.state.consent}
-                                onChange={this.handleConsent}
-                                name="consent"
-                                color="primary"
-                            />
-                            }
-                            label="Marketing Consent"
-                        />
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid item xs={12}>
-                    <Button color="primary" fullWidth type="submit" variant="contained">
-                    Submit
-                    </Button>
-                </Grid>
-                </Grid>
-            </form>
-            </Container>
+            // <Container style={styles.formContainer}>
+            // <form name="mail" onSubmit={this.handleSubmit}>
+            //     <Grid container spacing={3}>
+            //     <Grid item xs={12}>
+            //         <Grid container spacing={2}>
+            //             <Grid item xs={12}>
+            //                 <TextField fullWidth label="First Name" name="name" size="small" variant="outlined" required onChange={this.handleName} />
+            //             </Grid>
+            //             <Grid item xs={12}>
+            //                 <TextField
+            //                     fullWidth
+            //                     label="Email Address"
+            //                     name="email"
+            //                     size="small"
+            //                     type="email"
+            //                     variant="outlined"
+            //                     required
+            //                     onChange={this.handleEmail}
+            //                 />
+            //             </Grid>
+            //             <Grid item xs={12}>
+            //             <FormControlLabel
+            //                 style={styles.checkboxLabel}
+            //                 control={
+            //                 <Checkbox
+            //                     checked={this.state.consent}
+            //                     onChange={this.handleConsent}
+            //                     name="consent"
+            //                     color="primary"
+            //                 />
+            //                 }
+            //                 label="Marketing Consent"
+            //             />
+            //             </Grid>
+            //         </Grid>
+            //     </Grid>
+            //     <Grid item xs={12}>
+            //         <Button color="primary" fullWidth type="submit" variant="contained">
+            //         Submit
+            //         </Button>
+            //     </Grid>
+            //     </Grid>
+            // </form>
+            // </Container>
+            <div></div>
         )
     }
 }
