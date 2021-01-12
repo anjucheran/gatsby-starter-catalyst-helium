@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '@material-ui/core'
 import { navigate } from 'gatsby'
 
 import '../styles/formStyles.css'

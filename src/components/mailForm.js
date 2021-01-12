@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button, Grid, TextField, FormControlLabel, Checkbox, Container } from '@material-ui/core'
 import { navigate } from 'gatsby'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
@@ -43,51 +42,27 @@ class MailForm extends React.Component{
     
     render() {
         return (
-            // <Container style={styles.formContainer}>
-            // <form name="mail" onSubmit={this.handleSubmit}>
-            //     <Grid container spacing={3}>
-            //     <Grid item xs={12}>
-            //         <Grid container spacing={2}>
-            //             <Grid item xs={12}>
-            //                 <TextField fullWidth label="First Name" name="name" size="small" variant="outlined" required onChange={this.handleName} />
-            //             </Grid>
-            //             <Grid item xs={12}>
-            //                 <TextField
-            //                     fullWidth
-            //                     label="Email Address"
-            //                     name="email"
-            //                     size="small"
-            //                     type="email"
-            //                     variant="outlined"
-            //                     required
-            //                     onChange={this.handleEmail}
-            //                 />
-            //             </Grid>
-            //             <Grid item xs={12}>
-            //             <FormControlLabel
-            //                 style={styles.checkboxLabel}
-            //                 control={
-            //                 <Checkbox
-            //                     checked={this.state.consent}
-            //                     onChange={this.handleConsent}
-            //                     name="consent"
-            //                     color="primary"
-            //                 />
-            //                 }
-            //                 label="Marketing Consent"
-            //             />
-            //             </Grid>
-            //         </Grid>
-            //     </Grid>
-            //     <Grid item xs={12}>
-            //         <Button color="primary" fullWidth type="submit" variant="contained">
-            //         Submit
-            //         </Button>
-            //     </Grid>
-            //     </Grid>
-            // </form>
-            // </Container>
-            <div></div>
+            <div class="container">
+                <form name="mail" onSubmit={this.handleSubmit}>
+
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required onChange={this.handleName} />
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required onChange={this.handleEmail} />
+
+                    <label for="consent">
+                        <input type="checkbox" id="consent" name="consent" onChange={this.handleConsent} value={this.state.consent} />
+                        Marketing Consent
+                    </label>
+
+                    <input type="submit" value="Submit" />
+
+                </form>
+            </div>
         )
     }
 }
