@@ -8,7 +8,7 @@ class ContactForm extends React.Component{
         super(props)
         this.state = {
             botField: '',
-            name: '',
+            fname: '',
             email: '',
             company: '',
             message: '',
@@ -18,7 +18,7 @@ class ContactForm extends React.Component{
 
     handleName = (evt) => {
         this.setState({
-            name: evt.target.value
+            fname: evt.target.value
         })
     }
 
